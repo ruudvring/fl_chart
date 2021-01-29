@@ -456,7 +456,8 @@ class LineChartPainter extends AxisChartPainter<LineChartData>
   Path _generateBelowBarPath(
       Size viewSize, LineChartBarData barData, Path barPath, List<FlSpot> barSpots,
       {bool fillCompletely = false}) {
-    final belowBarPath = Path.from(barPath);
+//    final belowBarPath = Path.from(barPath);
+    final belowBarPath = barPath.shift(Offset(0, 0));
 
     final chartViewSize = getChartUsableDrawSize(viewSize);
 
@@ -495,7 +496,8 @@ class LineChartPainter extends AxisChartPainter<LineChartData>
   Path _generateAboveBarPath(
       Size viewSize, LineChartBarData barData, Path barPath, List<FlSpot> barSpots,
       {bool fillCompletely = false}) {
-    final aboveBarPath = Path.from(barPath);
+//    final aboveBarPath = Path.from(barPath);
+    final aboveBarPath = barPath.shift(Offset(0, 0));
 
     final chartViewSize = getChartUsableDrawSize(viewSize);
 
